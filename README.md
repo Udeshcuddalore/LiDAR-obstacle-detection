@@ -8,5 +8,13 @@ Lidar is an active sensor that emits laser beams and receives them upon reflecti
 
 The point cloud used in this project is obtained using a Velodyne VLP-64 Lidar, where 64 stands for the number of laser emitters in the emitter array. One scan of this sensor generates 256,000 points.
 
+## Workspace
+The workspace provided in the Sensor Fusion Engineer Nanodegree Program (SFND) classroom comes preinstallated with everything that you need to finish the exercises and projects. Versions used by Udacity for this ND are as follows:
+
+Ubuntu 16.04
+PCL - v1.7.2
+C++ v11
+gcc v5.5
+Note The [CMakeLists.txt] file provided in this repo can be used locally if you have the same package versions as mentioned above. If you want to run this project locally (outside the Udacity workspace), please follow the steps under the Local Installation section.
 ## Point Cloud Data 
 
