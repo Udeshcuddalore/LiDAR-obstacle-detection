@@ -20,8 +20,10 @@ Note The [CMakeLists.txt] file provided in this repo can be used locally if you 
 ### Ubuntu
 1. Clone this github repo:
 ## code
+```
 cd ~
 git clone https://github.com/udacity/SFND_Lidar_Obstacle_Detection.git
+```
 2. Edit CMakeLists.txt as follows:
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
