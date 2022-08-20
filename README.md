@@ -16,5 +16,51 @@ PCL - v1.7.2
 C++ v11
 gcc v5.5
 Note The [CMakeLists.txt] file provided in this repo can be used locally if you have the same package versions as mentioned above. If you want to run this project locally (outside the Udacity workspace), please follow the steps under the Local Installation section.
+## Local Installation
+### Ubuntu
+1. Clone this github repo:
+
+cd ~
+git clone https://github.com/udacity/SFND_Lidar_Obstacle_Detection.git
+2. Edit CMakeLists.txt as follows:
+
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+
+add_definitions(-std=c++14)
+
+set(CXX_FLAGS "-Wall")
+set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
+
+project(playback)
+
+find_package(PCL 1.11 REQUIRED)
+
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+list(REMOVE_ITEM PCL_LIBRARIES "vtkproj4")
+
+
+add_executable (environment src/environment.cpp src/render/render.cpp src/processPointClouds.cpp)
+target_link_libraries (environment ${PCL_LIBRARIES})
+3. Execute the following commands in a terminal
+
+sudo apt install libpcl-dev
+cd ~/SFND_Lidar_Obstacle_Detection
+mkdir build && cd build
+cmake ..
+make
+./environment
+This should install the latest version of PCL. You should be able to do all the classroom exercises and project with this setup.
+
+####Note The library version of PCL being distributed by the apt repository for 18.04 and 20.04 are both older than v1.11. The following links have the information regarding the versions-
+
+Bionic 18.04 Focal 20.04
+
+You can either build PCL from source (for v1.11) or use the older version.
+
+
+
+
 ## Point Cloud Data 
 
